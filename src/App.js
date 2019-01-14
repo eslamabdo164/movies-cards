@@ -7,7 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 library.add(faFilm)
 
-const API_KEY = '7ce76177';
+const API_KEY = 'GET_YOUR_OWN';
 class App extends Component {
 
   state = {
