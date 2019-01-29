@@ -28,7 +28,7 @@ class App extends Component {
 }
 
 handleFetch = () => {
- fetch(`http://www.omdbapi.com/?t=${this.state.input}&apikey=${API_KEY}`)
+ fetch(`https://www.omdbapi.com/?t=${this.state.input}&apikey=${API_KEY}`)
 .then(results => results.json())
 .then(data => {
   if(data.Response === 'True'){
