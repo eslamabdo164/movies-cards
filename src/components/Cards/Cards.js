@@ -2,8 +2,8 @@ import React  from 'react' ;
 import { Container, Row, Col } from 'reactstrap';
 import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button } from 'reactstrap';
 import searchImg from './searchImg.svg';
-const Cards = ({title , genre , description , init}) => {
-    if(!init && title) {
+const Cards = ({title , genre , description , init , phase}) => {
+    if(!init && title && phase !== 'Movie Not Found') {
         return (
             <Container className='mt-4 d-flex' >
             <Row className='h-100'>
@@ -15,7 +15,7 @@ const Cards = ({title , genre , description , init}) => {
                 </Col>
                 <Col className='col-md-4'>   
                     <Card className='text-left shadow'>
-                                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                                <CardImg top width="100%" src="https://picsum.photos/318/180/" alt="Card image cap" />
                                 <CardBody>
                                     <CardTitle className='h3'>{title}</CardTitle>
                                     <CardSubtitle className='text-muted'>{genre}</CardSubtitle>
@@ -25,13 +25,14 @@ const Cards = ({title , genre , description , init}) => {
                         </Card> 
                 </Col>
             </Row>
+            <hr />
         </Container>
         )
     } else {
         return(
             <div className='mt-3'>
            
-                <p>Search for movies to get data ..</p>
+                <p>{phase}</p>
 
             </div>
         )
