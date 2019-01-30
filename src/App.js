@@ -8,7 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 library.add(faFilm)
 
-const API_KEY = '7ce76177';
+const API_KEY = 'GET_Your_OWN';
 class App extends Component {
 
   state = {
@@ -47,7 +47,7 @@ handleFetch = () => {
     this.setState({phase : 'Movie Not Found'})
   }
 })
-.catch(err => console.log('sorry Wrong Fetch!'))
+.catch(err => console.log('link not fetched!'))
 }
 
 
